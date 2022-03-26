@@ -1,44 +1,35 @@
 <?php
-//class cest une idee et l'objet cest instanciation de l'idee
-//class c'est la moule de l'objet
-//Attribut ou propriete variable appartenant a une classe
-//Methode  une fonction appartenant a une classe
-class Voiture{
-public $_nom;
-private $_prenom;
-private $_age;
-private $_niveau;
-private$_echole;
-private$_couleur;
-public function __construct($v){
+require_once('classvol.php');
+class Herr extends User1{
+//protected $_titre='Monsieur';
+public function bonjour(){
 
-//echo'je construit';
- $this->_prenom;
- $this->_nom;
- $this->_age;
-
- $this->_couleur=$v;
- 
-
-
-}
-public function nom($prenom,$nom,$age){
-    return 'bonjour je suis '.$this->_prenom=$prenom.' ' .$this->_nom=$nom.' jai ' .' '.$this->_age=$age.' ' .'ans'.' ';
-}
-public function __destruct()
-{
-    //echo'je suis detruit';
-    //echo $this->_nom='ahmed';
-}
-
-public function getniveau($niveau){
-
-return $this->_niveau=$niveau;
+    return '=> bonjour '.$this->_titre.' : ';
 
 }
 
 
 }
-$voiture=new Voiture('bbbb');
-echo $voiture->nom('rokaya','mobarek','14').'<br>';
-echo $voiture->getniveau('4eme');
+$herr1=new Herr();
+echo $herr1->bonjour();
+//echo $herr1->seteconstruct('jawad','elias','90 ','00/00/01'). '<br>';
+echo $herr1->getconstruct('mohamed','moh','40','00/00/00'). '<br>';
+//echo $herr1->getsex();
+
+
+class Frau extends User1{
+//protected $_titre='Monsieur'; 
+public function bonjour(){
+    
+
+    return '=>   bonjour '.$this->_titre1.' : ';
+
+}
+
+
+}
+$frau2=new Frau();
+echo $frau2->bonjour();
+//echo $herr1->seteconstruct('jawad','elias','90 ','00/00/01'). '<br>';
+echo $frau2->getconstruct('rzan','elbeniwi','10','00/00/00');
+//echo $herr1->getsex();
